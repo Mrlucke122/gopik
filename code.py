@@ -178,13 +178,9 @@ async def say(ctx, *arg):
     await ctx.message.delete()
     author = ctx.message.author
     msg = ctx.message.content
-    if(msg.find("@everyone") == -1):
+    if(msg.find("@everyone") == -1) and (msg.find("@here"):
         await ctx.send(' '.join(arg))
     else: await ctx.send("Нельзя упоминать всех!")
-    if(msg.find("@here") == -1):
-        await ctx.send(' '.join(arg))
-    else: await ctx.send("Нельзя упоминать всех!")
-
 
 @bot.command()
 async def allah(ctx):
