@@ -182,7 +182,7 @@ async def say(ctx, *arg):
     if ctx.message.role_mentions or ctx.message.mention_everyone:
         await ctx.send(author.mention + ", ты думаешь масспинг хорошая идея?")
     else:
-        await ctx.send(msg)
+        await ctx.send(' '.join(arg))
 
 @bot.command()
 async def allah(ctx):
