@@ -17,26 +17,29 @@ async def on_ready():
 @bot.command()
 async def kill(ctx, member: discord.Member):
     await ctx.message.delete()
-    await ctx.send('{} <:firearmpistolweapongunpngfavpngF:715978412967067788>  {}.'.format(member.mention, ctx.message.author.mention))
+    await ctx.send('{} <:firearmpistolweapongunpngfavpngF:715978412967067788>  {}.'.format(member.mention,
+                                                                                           ctx.message.author.mention))
 
 
 @bot.command()
 async def thxallah(ctx):
     await ctx.message.delete()
     await ctx.send(
-        ' {} благодарит аллаха اللَّهُ اكْبَرُﺃﻋُﻮﺫُ بِاللَّهِ ﻣِﻦَ ﺍﻟﺸَّﻴْﻄَﺎﻥِ ﺍﻟﺮَّﺟِﻴ **https://www.youtube.com/watch?v=C-V9vStmsLA**'.format(ctx.author.mention))
+        ' {} благодарит аллаха اللَّهُ اكْبَرُﺃﻋُﻮﺫُ بِاللَّهِ ﻣِﻦَ ﺍﻟﺸَّﻴْﻄَﺎﻥِ ﺍﻟﺮَّﺟِﻴ **https://www.youtube.com/watch?v=C-V9vStmsLA**'.format(
+            ctx.author.mention))
 
 
 @bot.command()
 async def plsallah(ctx):
     await ctx.message.delete()
     num = randint(1, 3)
-    if num==1:
+    if num == 1:
         await ctx.send('Аллах сжалился, и воскресил {}'.format(ctx.author.mention))
-    elif num==2:
+    elif num == 2:
         await ctx.send('Аллах отправил {} в джаннат'.format(ctx.author.mention))
-    elif num==3:
+    elif num == 3:
         await ctx.send('Аллах разгневался, и отправил {} в джаханнам'.format(ctx.author.mention))
+
 
 @bot.command()
 async def siska(ctx):
@@ -75,7 +78,8 @@ async def game(ctx):
     elif random_number >= 21 and random_number <= 30:
         await ctx.send(f"***{ctx.author.mention} Вас выебал в рот Ван Даркхолм!***")
     elif random_number >= 31 and random_number <= 34:
-        await ctx.send(f"***{ctx.author.mention} Вас изнасиловали в анус эльфийки с огромными сиськами и огромными членами!***")
+        await ctx.send(
+            f"***{ctx.author.mention} Вас изнасиловали в анус эльфийки с огромными сиськами и огромными членами!***")
     elif random_number >= 35 and random_number <= 40:
         await ctx.send(f"***{ctx.author.mention} Вы ассексуальны, вас никто не привлекает в сексуальном плане!***")
     elif random_number >= 41 and random_number <= 45:
@@ -134,19 +138,22 @@ async def spit(ctx, member: discord.Member):
     await ctx.message.delete()
     await ctx.send('{} плюнул в {}'.format(ctx.author.mention, member.mention))
 
+
 @bot.command()
 async def cry(ctx):
     await ctx.message.delete()
     await ctx.send('{} всплакнул'.format(ctx.author.mention))
-    
-#Альтернативный help
+
+
+# Альтернативный help
 
 @bot.command()
 async def rg(ctx):
     emb = discord.Embed(title='Рофло-Игры')
     emb.add_field(name='gay game'.format(bot), value='Запустить тест на гея!')
     await ctx.send(embed=emb)
- 
+
+
 @bot.command()
 async def islam(ctx):
     emb = discord.Embed(title='Ислам команды')
@@ -156,7 +163,8 @@ async def islam(ctx):
     emb.add_field(name='terrorist'.format(bot), value='Объявить джихад')
     emb.add_field(name='thxallah'.format(bot), value='Поблагодарить аллаха')
     await ctx.send(embed=emb)
-    
+
+
 @bot.command()
 async def hate(ctx):
     emb = discord.Embed(title='Оскорбляющие команды')
@@ -164,14 +172,17 @@ async def hate(ctx):
     emb.add_field(name='sex'.format(bot), value='Трахнуть кого-то')
     emb.add_field(name='spit'.format(bot), value='Плюнуть в дебильчика')
     await ctx.send(embed=emb)
-    
+
+
 @bot.command()
 async def say(ctx, *arg):
     await ctx.message.delete()
     author = ctx.message.author
     msg = ctx.message.content
+    if(msg.find("@everyone") == -1):
+        await ctx.send(' '.join(arg))
+    else: await ctx.send("Нельзя упоминать всех!")
     print(author, msg)
-    await ctx.send(' '.join(arg))
 
 
 @bot.command()
@@ -200,11 +211,13 @@ async def help(ctx):
     emb.add_field(name='help rg'.format(bot), value='Показать команды связаные с рофло-играми')
     await ctx.send(embed=emb)
 
+
 @help.command()
 async def rg(ctx):
     emb = discord.Embed(title='Рофло-Игры')
     emb.add_field(name='gay game'.format(bot), value='Запустить тест на гея!')
     await ctx.send(embed=emb)
+
 
 @help.command()
 async def islam(ctx):
