@@ -178,9 +178,11 @@ async def say(ctx, *arg):
     await ctx.message.delete()
     author = ctx.message.author
     msg = ctx.message.content
-    if(msg.find("@everyone") == -1) and (msg.find("@here"):
-        await ctx.send(' '.join(arg))
-    else: await ctx.send("Нельзя упоминать всех!")
+    print(author, msg)
+    if ctx.message.role_mentions or ctx.message.mention_everyone:
+        await ctx.send(author.mention + ", ты думаешь масспинг хорошая идея?")
+    else:
+        await ctx.send(msg)
 
 @bot.command()
 async def allah(ctx):
@@ -234,6 +236,5 @@ async def hate(ctx):
     emb.add_field(name='sex'.format(bot), value='Трахнуть кого-то')
     emb.add_field(name='spit'.format(bot), value='Плюнуть в дебильчика')
     await ctx.send(embed=emb)
-
 
 bot.run(os.environ['TOKEN'])
