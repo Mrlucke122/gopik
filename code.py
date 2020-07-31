@@ -17,8 +17,7 @@ async def on_ready():
 @bot.command()
 async def kill(ctx, member: discord.Member):
     await ctx.message.delete()
-    await ctx.send('{} <:firearmpistolweapongunpngfavpngF:715978412967067788>  {}.'.format(member.mention,
-                                                                                           ctx.message.author.mention))
+    await ctx.send('{} <:firearmpistolweapongunpngfavpngF:715978412967067788>  {}.'.format(member.mention, ctx.message.author.mention))
 
 
 @bot.command()
