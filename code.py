@@ -182,6 +182,9 @@ async def say(ctx, *arg):
     if(msg.find("@everyone") == -1):
         await ctx.send(' '.join(arg))
     else: await ctx.send("Нельзя упоминать всех!")
+    if(msg.find("@here") == -1):
+        await ctx.send(' '.join(arg))
+    else: await ctx.send("Нельзя упоминать всех!")
     print(author, msg)
 
 
