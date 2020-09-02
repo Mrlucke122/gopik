@@ -36,7 +36,7 @@ async def кто(ctx):
 async def гей(ctx):
     await ctx.send("Похоже что " + choice(ctx.guild.members).mention + " гей")
     
-@bot.group()
+@bot.command()
 async def chance(ctx):
     chancee = randint(1, 100)
     await ctx.send("Шанс того что " + ctx + " равен " + chance + "%")
