@@ -34,7 +34,7 @@ async def кто(ctx):
 
 @кто.command(invoke_without_command=True)
 async def гей(ctx):
-    await ctx.send(f"Похоже что " + "choice(ctx.guild.members).mention" + " гей")
+    await ctx.send("Похоже что " + choice(ctx.guild.members).mention + " гей")
 
 @bot.command()
 async def plsallah(ctx):
