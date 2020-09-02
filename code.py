@@ -29,7 +29,7 @@ async def thxallah(ctx):
             ctx.author.mention))
     
 @bot.group()
-async def кто:
+async def кто(ctx):
     print("who")
 
 @bot.command()
