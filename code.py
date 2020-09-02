@@ -32,7 +32,7 @@ async def thxallah(ctx):
 async def кто(ctx):
     print("who")
 
-@bot.command()
+@кто.command(invoke_without_command=True)
 async def гей(ctx):
     await ctx.send(choice(ctx.guild.members).mention)
 
