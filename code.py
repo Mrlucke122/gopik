@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import random
+from random import choice
 from random import randint
 import os
 
@@ -26,7 +27,13 @@ async def thxallah(ctx):
     await ctx.send(
         ' {} благодарит аллаха اللَّهُ اكْبَرُﺃﻋُﻮﺫُ بِاللَّهِ ﻣِﻦَ ﺍﻟﺸَّﻴْﻄَﺎﻥِ ﺍﻟﺮَّﺟِﻴ **https://www.youtube.com/watch?v=C-V9vStmsLA**'.format(
             ctx.author.mention))
+    
+@bot.group()
+async def кто
 
+@bot.command()
+async def гей(ctx):
+    await ctx.send(choice(ctx.guild.members).mention)
 
 @bot.command()
 async def plsallah(ctx):
