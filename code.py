@@ -39,7 +39,7 @@ async def гей(ctx):
 @bot.command()
 async def chance(ctx):
     chancee = randint(1, 100)
-    await ctx.send("Шанс того что " + ctx + " равен " + chance + "%")
+    await ctx.send("Шанс того что " + ctx.message + " равен " + chance + "%")
         
 @bot.command()
 async def plsallah(ctx):
