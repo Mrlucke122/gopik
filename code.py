@@ -35,7 +35,12 @@ async def кто(ctx):
 @кто.command(invoke_without_command=True)
 async def гей(ctx):
     await ctx.send("Похоже что " + choice(ctx.guild.members).mention + " гей")
-
+    
+@bot.group()
+async def chance(ctx):
+    chancee = randint(1, 100)
+    await ctx.send("Шанс того что " + ctx + " равен " + chance + "%")
+        
 @bot.command()
 async def plsallah(ctx):
     await ctx.message.delete()
