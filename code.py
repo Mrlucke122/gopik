@@ -25,7 +25,7 @@ async def kill(ctx, member: discord.Member):
 async def thxallah(ctx):
     await ctx.message.delete()
     await ctx.send(
-        ' {} благодарит аллаха اللَّهُ اكْبَرُﺃﻋُﻮﺫُ بِاللَّهِ ﻣِﻦَ ﺍﻟﺸَّﻴْﻄَﺎﻥِ ﺍﻟﺮَّﺟِﻴ **https://www.youtube.com/watch?v=C-V9vStmsLA**'.format(
+        ' {} благодарит аллаха اللَّهُ اكْبَرُﺃﻋُﻮﺫُ بِاللَّهِ ﻣِﻦَ ﺍﻟﺸَّﻴْﻄَﺎﻥِ ﺍﻟﺮَّﺟِﻴ'.format(
             ctx.author.mention))
     
 @bot.group()
@@ -228,6 +228,7 @@ async def help(ctx):
 async def rg(ctx):
     emb = discord.Embed(title='Рофло-Игры')
     emb.add_field(name='gay game'.format(bot), value='Запустить тест на гея!')
+    emb.add_field(name='кто гей'.format(bot), value='Показывает кто гей')
     await ctx.send(embed=emb)
 
 
