@@ -188,11 +188,11 @@ async def hate(ctx):
 
 @bot.command()
 async def say(ctx, *arg):
-    await ctx.message.delete()
     author = ctx.message.author
     msg = ctx.message.content
     print(author, msg)
     if ctx.message.role_mentions or ctx.message.mention_everyone:
+        await ctx.message.delete()
         await ctx.send(author.mention + ", ты думаешь масспинг хорошая идея?")
     else:
         await ctx.send(' '.join(arg))
