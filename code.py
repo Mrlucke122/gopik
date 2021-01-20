@@ -63,7 +63,7 @@ async def siska(ctx):
 async def namaz(ctx):
     await ctx.message.delete()
     await ctx.send(
-        ' {} сделал намаз اللَّهُ اكْبَرُﺃﻋُﻮﺫُ بِاللَّهِ ﻣِﻦَ ﺍﻟﺸَّﻴْﻄَﺎﻥِ ﺍﻟﺮَّﺟِﻴ ||https://www.youtube.com/watch?v=mE6C0lQNmUU||'.format(
+        ' {} сделал намаз اللَّهُ اكْبَرُﺃﻋُﻮﺫُ بِاللَّهِ ﻣِﻦَ ﺍﻟﺸَّﻴْﻄَﺎﻥِ ﺍﻟﺮَّﺟِﻴ||'.format(
             ctx.author.mention))
 
 
@@ -139,11 +139,6 @@ async def terrorist(ctx, member: discord.Member):
     await ctx.send('{} взорвал {} اللهم ارحمني! قتله! باسمك! بسم الله الحق!'.format(ctx.author.mention, member.mention))
 
 
-@bot.command()
-async def buisnes(ctx):
-    await ctx.message.delete()
-    await ctx.send('Мы открываем бизнес, мы будем делать бабки https://www.youtube.com/watch?v=6VqCFnHXoYU')
-
 
 @bot.command()
 async def spit(ctx, member: discord.Member):
@@ -215,7 +210,6 @@ async def help(ctx):
     emb.add_field(name='say'.format(bot), value='Бот говорит за вас')
     emb.add_field(name='pohyu'.format(bot), value='Сказать что тебе похуй')
     emb.add_field(name='cry'.format(bot), value='Поплакать')
-    emb.add_field(name='buisnes'.format(bot), value='Мы открываем бизнес')
     emb.add_field(name='help islam'.format(bot), value='Показать команды связаные с исламом')
     emb.add_field(name='help hate'.format(bot), value='Показать команды связаные с оскорблениями')
     emb.add_field(name='help rg'.format(bot), value='Показать команды связаные с рофло-играми')
