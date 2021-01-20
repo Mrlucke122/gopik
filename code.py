@@ -5,6 +5,9 @@ from random import choice
 from random import randint
 import os
 
+intents = discord.Intents()
+intents.members = True
+
 bot = commands.Bot(command_prefix='r!')
 bot.remove_command('help')
 
