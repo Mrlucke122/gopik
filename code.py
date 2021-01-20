@@ -180,18 +180,6 @@ async def hate(ctx):
     emb.add_field(name='spit'.format(bot), value='Плюнуть в дебильчика')
     await ctx.send(embed=emb)
 
-
-@bot.command()
-async def say(ctx, *arg):
-    author = ctx.message.author
-    msg = ctx.message.content
-    print(author, msg)
-    if ctx.message.role_mentions or ctx.message.mention_everyone:
-        await ctx.message.delete()
-        await ctx.send(author.mention + ", ты думаешь масспинг хорошая идея?")
-    else:
-        await ctx.send(' '.join(arg))
-
 @bot.command()
 async def allah(ctx):
     await  ctx.message.delete()
@@ -207,7 +195,6 @@ async def pohyu(ctx):
 
 @bot.group(invoke_without_command=True)
 async def help(ctx):
-    emb.add_field(name='say'.format(bot), value='Бот говорит за вас')
     emb.add_field(name='pohyu'.format(bot), value='Сказать что тебе похуй')
     emb.add_field(name='cry'.format(bot), value='Поплакать')
     emb.add_field(name='help islam'.format(bot), value='Показать команды связаные с исламом')
