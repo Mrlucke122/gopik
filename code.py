@@ -18,7 +18,7 @@ async def on_ready():
 @bot.command()
 async def kill(ctx, member: discord.Member):
     await ctx.message.delete()
-    await ctx.send('{} <:firearmpistolweapongunpngfavpngF:715978412967067788>  {}.'.format(member.mention, ctx.message.author.mention))
+    await ctx.send('{} 🔫  {}.'.format(member.mention, ctx.message.author.mention))
 
 
 @bot.command()
@@ -212,8 +212,6 @@ async def pohyu(ctx):
 
 @bot.group(invoke_without_command=True)
 async def help(ctx):
-    emb = discord.Embed(title='Навигация по командам')
-    emb.add_field(name='rpassword'.format(bot), value='Случайный пароль')
     emb.add_field(name='say'.format(bot), value='Бот говорит за вас')
     emb.add_field(name='pohyu'.format(bot), value='Сказать что тебе похуй')
     emb.add_field(name='cry'.format(bot), value='Поплакать')
