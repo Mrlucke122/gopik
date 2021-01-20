@@ -8,7 +8,7 @@ import os
 intents = discord.Intents()
 intents.members = True
 
-bot = commands.Bot(command_prefix='r!')
+bot = commands.Bot(intents = intents, command_prefix='r!')
 bot.remove_command('help')
 
 
@@ -54,12 +54,6 @@ async def plsallah(ctx):
         await ctx.send('Аллах отправил {} в джаннат'.format(ctx.author.mention))
     elif num == 3:
         await ctx.send('Аллах разгневался, и отправил {} в джаханнам'.format(ctx.author.mention))
-
-
-@bot.command()
-async def siska(ctx):
-    await ctx.message.delete()
-    await ctx.send('https://cdn.discordapp.com/attachments/699070101369913367/738475041712242768/GqqHaiPK6gI.jpg')
 
 
 @bot.command()
