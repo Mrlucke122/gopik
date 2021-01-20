@@ -7,8 +7,7 @@ import os
 
 intents = discord.Intents()
 intents.members = True
-
-bot = commands.Bot(intents = intents, command_prefix='r!')
+bot = commands.Bot(intents = intents, command_prefix = 'r!')
 bot.remove_command('help')
 
 
