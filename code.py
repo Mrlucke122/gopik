@@ -191,6 +191,7 @@ async def pohyu(ctx):
 
 @bot.group(invoke_without_command=True)
 async def help(ctx):
+    emb = discord.Embed(title= "Информация о командах", colour= 0x39d0d6)
     emb.add_field(name='pohyu'.format(bot), value='Сказать что тебе похуй')
     emb.add_field(name='cry'.format(bot), value='Поплакать')
     emb.add_field(name='help islam'.format(bot), value='Показать команды связаные с исламом')
