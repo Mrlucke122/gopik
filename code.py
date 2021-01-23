@@ -131,7 +131,6 @@ async def ban(ctx, member: discord.Member):
 
 @bot.command()
 async def terrorist(ctx, member: discord.Member):
-    await ctx.message.delete()
     await ctx.send('{} взорвал {} اللهم ارحمني! قتله! باسمك! بسم الله الحق!'.format(ctx.author.mention, member.mention))
 
 
@@ -144,8 +143,7 @@ async def spit(ctx, member: discord.Member):
 
 @bot.command()
 async def cry(ctx):
-    await ctx.message.delete()
-    await ctx.send('{} всплакнул'.format(ctx.author.mention))
+    await ctx.send('{} поплакал :sob:'.format(ctx.author.mention))
 
 
 # Альтернативный help
@@ -184,10 +182,7 @@ async def allah(ctx):
 
 @bot.command()
 async def pohyu(ctx):
-    await  ctx.message.delete()
-    await ctx.send("{} вообще похуй".format(ctx.message.author.mention))
-    await ctx.send("https://www.youtube.com/watch?v=jbvYDqy2oO0")
-
+    await ctx.send("{} похуй".format(ctx.message.author.mention))
 
 @bot.group(invoke_without_command=True)
 async def help(ctx):
