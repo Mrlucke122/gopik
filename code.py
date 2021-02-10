@@ -22,6 +22,11 @@ async def kill(ctx, member: discord.Member):
     await ctx.message.delete()
     await ctx.send('{} 🔫  {}.'.format(member.mention, ctx.message.author.mention))
 
+@bot.command()
+async def kill(ctx, member: discord.Member):
+    await ctx.message.delete()
+    await ctx.send('test\n test')
+
 
 @bot.command()
 async def thxallah(ctx):
