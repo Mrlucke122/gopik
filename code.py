@@ -177,6 +177,14 @@ async def hate(ctx):
     emb.add_field(name='sex'.format(bot), value='Трахнуть кого-то')
     emb.add_field(name='spit'.format(bot), value='Плюнуть в дебильчика')
     await ctx.send(embed=emb)
+    
+
+@bot.command()
+async def sympic(ctx):
+    emb = discord.Embed(title='Картиночки из буковок')
+    emb.add_field(name='dickpic'.format(bot), value='Пэсюн из символов')
+    await ctx.send(embed=emb)
+    
 
 @bot.command()
 async def allah(ctx):
