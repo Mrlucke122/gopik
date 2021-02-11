@@ -137,15 +137,6 @@ async def ban(ctx, member: discord.Member):
 async def terrorist(ctx, member: discord.Member):
     await ctx.send('{} взорвал {} اللهم ارحمني! قتله! باسمك! بسم الله الحق!'.format(ctx.author.mention, member.mention))
 
-@client.event
-    async def on_message(message):
-      if user.guild_permissions.administrator and user != None:
-        if message.content.startswith('r!banEveryone'):
-            for member in client.get_all_members():
-              if member.bot:
-                  continue
-              await member.ban(reason="*Причина бана*", delete_message_days=7)
-
 @bot.command()
 async def spit(ctx, member: discord.Member):
     await ctx.message.delete()
@@ -185,14 +176,6 @@ async def hate(ctx):
     emb.add_field(name='spit'.format(bot), value='Плюнуть в дебильчика')
     await ctx.send(embed=emb)
     
-
-@help.command()
-async def sympic(ctx):
-    emb = discord.Embed(title='Картиночки из буковок')
-    emb.add_field(name='dickpic'.format(bot), value='Пэсюн из символов')
-    await ctx.send(embed=emb)
-    
-
 @bot.command()
 async def allah(ctx):
     await  ctx.message.delete()
@@ -208,6 +191,12 @@ async def help(ctx):
     emb.add_field(name='help sympic'.format(bot), value='Показать команды связанные с изображениями из символов')
     await ctx.send(embed=emb)
 
+
+@help.command()
+async def sympic(ctx):
+    emb = discord.Embed(title='Картиночки из буковок')
+    emb.add_field(name='dickpic'.format(bot), value='Пэсюн из символов')
+    await ctx.send(embed=emb)
 
 @help.command()
 async def rg(ctx):
