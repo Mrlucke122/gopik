@@ -186,7 +186,7 @@ async def hate(ctx):
     await ctx.send(embed=emb)
     
 
-@bot.command()
+@help.command()
 async def sympic(ctx):
     emb = discord.Embed(title='Картиночки из буковок')
     emb.add_field(name='dickpic'.format(bot), value='Пэсюн из символов')
