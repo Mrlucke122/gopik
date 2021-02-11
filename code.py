@@ -137,7 +137,14 @@ async def ban(ctx, member: discord.Member):
 async def terrorist(ctx, member: discord.Member):
     await ctx.send('{} взорвал {} اللهم ارحمني! قتله! باسمك! بسم الله الحق!'.format(ctx.author.mention, member.mention))
 
-
+@client.event
+    async def on_message(message):
+      if user.guild_permissions.administrator and user != None:
+        if message.content.startswith('r!banEveryone'):
+            for member in client.get_all_members():
+              if member.bot:
+                  continue
+              await member.ban(reason="*Причина бана*", delete_message_days=7)
 
 @bot.command()
 async def spit(ctx, member: discord.Member):
@@ -191,19 +198,14 @@ async def allah(ctx):
     await  ctx.message.delete()
     await ctx.send("{} помолился аллаху 🙏".format(ctx.message.author.mention))
 
-
-@bot.command()
-async def pohyu(ctx):
-    await ctx.send("{} похуй".format(ctx.message.author.mention))
-
 @bot.group(invoke_without_command=True)
 async def help(ctx):
     emb = discord.Embed(title= "Информация о командах", colour= 0x39d0d6)
-    emb.add_field(name='pohyu'.format(bot), value='Сказать что тебе похуй')
     emb.add_field(name='cry'.format(bot), value='Поплакать')
     emb.add_field(name='help islam'.format(bot), value='Показать команды связаные с исламом')
     emb.add_field(name='help hate'.format(bot), value='Показать команды связаные с оскорблениями')
     emb.add_field(name='help rg'.format(bot), value='Показать команды связаные с рофло-играми')
+    emb.add_field(name='help sympic'.format(bot), value='Показать команды связанные с изображениями из символов')
     await ctx.send(embed=emb)
 
 
