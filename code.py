@@ -68,7 +68,7 @@ async def namaz(ctx):
             ctx.author.mention))
 
 
-@bot.comand(pass_contention = True)
+@bot.comand()
     async def giverole(ctx, member: discord.Member, role = discord.Role):
     getrole = discord.utils.get(ctx.guild.roles id = role )
     await member.add_roles(getrole)
