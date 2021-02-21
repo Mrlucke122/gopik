@@ -68,6 +68,11 @@ async def namaz(ctx):
             ctx.author.mention))
 
 
+@bot.comand(pass_contention = True)
+async def giverole(ctx, member: discord.Member, role = discord.Role):
+getrole = discord.utils.get(ctx.guild.roles id = role )
+await member.add_roles(getrole)
+
 @bot.command()
 async def sex(ctx, member: discord.Member):
     await ctx.message.delete()
